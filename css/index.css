@@ -211,3 +211,7 @@ main {
 .cMain__description{
     width: 40%;
 }
+
+.gras{
+    font-weight: bold;
+}
