@@ -155,7 +155,6 @@ main {
 .cardRecette{
     background-color: #E7E7E7;
     width: 380px;
-    height: 364px;
     margin-bottom: 50px;
     border-radius: 5px;
     overflow: hidden;
@@ -167,7 +166,7 @@ main {
 }
 
 .cardRecette__text{
-    height: 186px;
+    height: 146px;
     padding: 20px;
 }
 /**/
