@@ -46,7 +46,6 @@ main {
     position: relative;
 }
 .inputSearchRecette{
-    
     display: block;
     width: 100%;
     height: 69px;
@@ -54,6 +53,9 @@ main {
     background-color: #E7E7E7;
     border: none;
     border-radius: 5px;
+    /*padding-left: 24px;
+    padding-right: 50px;*/
+    margin-bottom: 25px;
 }
 
 .inputSearchRecette__loupe{
@@ -79,7 +81,6 @@ main {
     border-radius: 5px;
     z-index: 2;
     left: 80px;
-    margin-top: 15px;
     margin-right: 20px;
     margin-bottom: 25px;
 }
