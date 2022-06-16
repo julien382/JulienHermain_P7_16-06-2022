@@ -170,3 +170,44 @@ main {
     height: 186px;
     padding: 20px;
 }
+/**/
+.cText__header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cHeader__titleRecette{
+    font-weight: 400;
+}
+
+.cHeader__time{
+    display: flex;
+}
+
+.clock{
+    background: url(../assets/icons/clock.svg) center center / 100% 100%;
+    width: 20px;
+    height: 20px;
+    margin-left: 13px;
+    margin-right: 8px;
+}
+
+.min{
+    font-weight: 700;
+}
+
+.cText__main{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.cMain__ingredients{
+
+}
+
+.cMain__description{
+    width: 40%;
+}
