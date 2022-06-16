@@ -10,13 +10,16 @@
   </head>
   <body>
     <header>
-        <div class="logoTitle">
-            <img src="assets/icons/logo.svg" class="logoTitle__logo" alt="logo">
-            <h1 class="logoTitle__title">Les petits plats</h1>
+        <div class="divLogoTitle">
+            <img src="assets/icons/logo.svg" class="divLogoTitle__logo" alt="logo">
+            <h1 class="divLogoTitle__title">Les petits plats</h1>
         </div>
     </header>
     <main>
-        <div class="search"></div>
+        <div class="search">
+            <input class="inputSearchRecette" type="text" id="searchRecette" name="searchRecette" placeholder="Rechercher une recette">
+            <label for="searchRecette" class="labelSearchRecette"></label>
+        </div>
         <div class="tri">
             <div class="elementTri">
               <div class="elementTri__flex">
@@ -32,14 +35,14 @@
                   <div class="elementTri__arrow"></div>
                 </div>
               </div>
-          </div>
-          <div class="elementTri elementTri3">
-            <div class="elementTri__flex">
-              <p class="elementTri__text">Ustensiles</p>
-              <div class="elementTri__arrow"></div>
-            </div>
-            <!--<p class="elementTri__text">Date</p>
-            <p class="elementTri__text">Titre</p>-->
+              <div class="elementTri elementTri3">
+                <div class="elementTri__flex">
+                  <p class="elementTri__text">Ustensiles</p>
+                  <div class="elementTri__arrow"></div>
+                </div>
+                <!--<p class="elementTri__text">Date</p>
+                <p class="elementTri__text">Titre</p>-->
+              </div>
           </div>
 
     </main>
