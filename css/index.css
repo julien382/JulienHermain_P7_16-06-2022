@@ -108,10 +108,42 @@ main {
     margin-left: 15px;
 }
 
-.elementTri__separator{
-    width: 100%;
-    height: 1px;
-    background-color: white;
+/* --- elementIngrédient/Appareils/Ustensils --- */ 
+.elementIngrédient{
+    background-color: #3282F7;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 2;
+    left: 80px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.elementIngrédient2{
+    background-color:#68D9A4;
+}
+
+.elementIngrédient3{
+    background-color: #ED6454;
+}
+
+.elementIngrédient__flex{
+    display: flex;
+    align-items: center;
+}
+
+/*.elementIngrédient__text{
+}*/
+
+.elementIngrédient__arrow{
+    background: url(../assets/icons/cross.svg) center center / 100% 100%;
+    width: 20px;
+    height: 20px;
+    margin-left: 13px;
+    margin-right: 8px;
 }
 
 /* --- Recette --- */ 
