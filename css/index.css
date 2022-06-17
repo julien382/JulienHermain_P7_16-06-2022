@@ -46,14 +46,14 @@ main {
 }
 .inputSearchRecette{
     display: block;
-    width: 100%;
+    width: 94%;
     height: 69px;
     font-size: 18px;
     background-color: #E7E7E7;
     border: none;
     border-radius: 5px;
-    /*padding-left: 24px;
-    padding-right: 50px;*/
+    padding-left: 1.5%;
+    padding-right: 4.5%;
     margin-bottom: 25px;
 }
 
