@@ -1,5 +1,14 @@
 export const createCard = async () => {
+    const cards = document.querySelector(".cards");
+    medias.forEach(media => {
 
+        const card = createCard()
+        cards.append(card)
+    });
+};
+
+
+const createCard = () => {
     const cardRecette = document.createElement('div');
     cardRecette.classList.add('cardRecette')
 
@@ -39,7 +48,6 @@ export const createCard = async () => {
     const p = document.createElement('p');
 
 
-    card.append(cardRecette)
     cardRecette.append(cardRecette__image)
     cardRecette.append(cardRecette__text)
 
@@ -61,5 +69,4 @@ export const createCard = async () => {
 
     cMain__description.append(p)
 
-    return card
 };
