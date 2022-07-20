@@ -1,6 +1,6 @@
 export const createCard = async () => {
     const cards = document.querySelector(".cards");
-    recipes.forEach(recipe => {
+    allRecipies.forEach(recipies => {
 
         const card = createCard()
         cards.append(card)
