@@ -1,21 +1,11 @@
-export const getData = async () => {
-    const response = await fetch('../../data/photographers.json');
+export const getAllRecipies = async () => {
+    const response = await fetch('./data/recipes.json');
 
     if (response.ok) {
         const data = await response.json()
-        return data;
+        return data.recipes;
     } else {
         console.error('ça va pas:', response.status, response.statusText);
+        return null;
     }
-}
-
-export const getAllRecipies = async (id) => {
-    const DATA = await getData()
-    let allRecipies = []
-    DATA.recipies.forEach((recipies)=>{
-        if (recipies.photographerId == id){
-            allRecipies.push(recipies)
-        }
-    })
-    return allRecipies
 }
