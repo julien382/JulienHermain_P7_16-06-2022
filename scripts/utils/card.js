@@ -58,7 +58,7 @@ const createCard = (recipe) => {
     cMain__description.append(p)
     cText__main.append(cMain__description)
 
-    cardRecette.append(cText__main)
+    cardRecette__text.append(cText__main)
 
     return cardRecette;
 };
