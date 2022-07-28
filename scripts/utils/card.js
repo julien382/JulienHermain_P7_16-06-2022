@@ -64,7 +64,7 @@ const createCard = (recipe) => {
 };
 
 export const displayRecipies = (allRecipies) => {
-    const cards = document.querySelector('.cards');
+    const cards = document.querySelector('.cardsRecette');
     cards.innerHTML = '';
 
     allRecipies.forEach(recipe => {
