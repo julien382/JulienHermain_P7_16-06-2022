@@ -33,6 +33,7 @@ const createCard = (recipe) => {
 
     const gras = document.createElement('p');
     gras.classList.add('gras')
+    gras.textContent = recipe.ingredients.ingredient + recipe.ingredients.ingredient + recipe.ingredients.ingredient
 
     const cMain__description = document.createElement('div');
     cMain__description.classList.add('cMain__description')
