@@ -1,23 +1,30 @@
 // index.js
 
-import { displayRecipies } from "../utils/card.js";
-import { getAllRecipies } from "../utils/dataHandler.js";
-import { getAllIngredients } from "../utils/getAllIngredients.js";
+import { displayRecipies } from "../app/displayRecipies.js";
+import { getAllRecipies } from "../app/data/getAllRecipies.js";
+import { handleInputIngredient } from "../app/handleIngredientInput.js";
+import { setLocalStorage } from "../app/utils/localStorage.js";
 
 const init = async () => {
     // On récupère toutes les recettes
     const allRecipies = await getAllRecipies()
 
     // On met toutes les recettes à display = true
+    // la clé "display" est utilisée pour afficher ou non une recette
     allRecipies.forEach(recipe => {
         recipe.display = true;
     })
 
-    const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
+    // stocker les recettes dans le localStorage pour pouvoir les réutiliser n'importe où
+    setLocalStorage(allRecipies)
 
-    console.log(allIngredients);
-    // insertIngredientsInDropdown(allIngredients);
+    
+    // on gère les inputs
+    handleInputIngredient()
+    // ....
 
+
+    // on affiche les recettes
     displayRecipies(allRecipies)
 };
 
