@@ -107,6 +107,10 @@ main {
     color: white;
 }
 
+.elementTri__input::placeholder{ 
+    color: white;
+}
+
 /*.elementTri__text{
 }*/
 
