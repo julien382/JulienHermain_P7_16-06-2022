@@ -115,13 +115,24 @@ main {
 
 .elementTri__dropdown {
     position: absolute; 
-    background-color: violet;
+    background-color: #3282F7;
     width: 100%;
     padding: 23px;
     left: -23px;
     top: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     display: none;
 }
+
+.elementTri__dropdown2{
+    background-color:#68D9A4;
+}
+
+.elementTri__dropdown3{
+    background-color: #ED6454;
+}
+
 .elementTri__dropdown--active {
     display: block;
 }
