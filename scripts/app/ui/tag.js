@@ -10,8 +10,3 @@ const createCard = (recipe) => {
 
     return cardTag;
 };
-
-export const displayRecipies = (allRecipies) => {
-    const tag = document.querySelector('.tag');
-    tag.innerHTML = '';
-}

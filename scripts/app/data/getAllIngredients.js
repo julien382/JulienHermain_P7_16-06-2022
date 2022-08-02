@@ -1,9 +1,4 @@
-/**
- * 
- * @param {string[]} allRecipies 
- * @returns {string[]} tableau de tous les ingrédients dont les recettes à display = true 
- */
- export const getAllIngredients = (allRecipies) => {
+export const getAllIngredients = (allRecipies) => {
     const ingredients = [];
 
     allRecipies.forEach(recipe => {
