@@ -97,7 +97,15 @@ main {
     align-items: center;
     position: relative;
 }
-
+/* --- inputTri --- */ 
+.elementTri__input{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+    outline: none;
+    color: white;
+}
 
 /*.elementTri__text{
 }*/
@@ -119,7 +127,7 @@ main {
     width: 100%;
     padding: 23px;
     left: -23px;
-    top: 40px;
+    top: 36px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     display: none;
