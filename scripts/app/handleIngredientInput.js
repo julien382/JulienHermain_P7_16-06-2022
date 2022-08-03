@@ -33,8 +33,8 @@ export const handleInputIngredient = () => {
       liDropdown.addEventListener('click', () => {
         createTag(ingredient, 'ingredient')
         
-        // [TODO]
-        // filterRecipesByIngredient(ingredient)
+        // [TODO] changer le nom allRecipes
+        // filterRecipiesByIngredient(ingredient)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
       })
