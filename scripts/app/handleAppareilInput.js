@@ -12,7 +12,7 @@ export const handleInputAppareil = () => {
     input.focus()
 
     const dropdown = inputContainer.querySelector('.elementTri__dropdown')
-    dropdown.classList.toggle('elementTri__dropdown2')
+    dropdown.classList.add('elementTri__dropdown2')
 
     // remplir la dropdown
     const allRecipies = getLocalStorage();
