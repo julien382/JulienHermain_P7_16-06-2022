@@ -21,6 +21,11 @@ export const handleInputIngredient = () => {
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
     // <li>*ingredient*</li>
     // !! bien penser à vider la dropdown à chaque fois !!
+    allIngredients.forEach(allRecipies => {
+      const liDropdown = document.createElement('li');
+      
+  });
+    dropdown.innerHTML = '';
 
     console.log(allIngredients);
 
