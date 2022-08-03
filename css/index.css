@@ -1,63 +1,63 @@
 body {
     max-width: 100vw;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding-top: 42px;
     padding-left: 100px;
     padding-right: 100px;
-}
-
-/* --- Header --- */ 
-header {
+  }
+  
+  /* --- Header --- */
+  header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.divLogoTitle{
+  }
+  
+  .divLogoTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.divLogoTitle__logo{
+  }
+  
+  .divLogoTitle__logo {
     width: 50.48px;
     height: 46.29px;
-}
-
-.divLogoTitle__title{
+  }
+  
+  .divLogoTitle__title {
     font-size: 36px;
-    color: #D04F4F;
-    font-weight: 700
-}
-
-/* --- main --- */ 
-main {
+    color: #d04f4f;
+    font-weight: 700;
+  }
+  
+  /* --- main --- */
+  main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-/* --- Search --- */ 
-.search{
+  }
+  
+  /* --- Search --- */
+  .search {
     width: 100%;
     margin-top: 17px;
     position: relative;
-}
-.inputSearchRecette{
+  }
+  .inputSearchRecette {
     display: block;
     width: 94%;
     height: 69px;
     font-size: 18px;
-    background-color: #E7E7E7;
+    background-color: #e7e7e7;
     border: none;
     border-radius: 5px;
     padding-left: 1.5%;
     padding-right: 4.5%;
     margin-bottom: 25px;
-}
-
-.inputSearchRecette__loupe{
+  }
+  
+  .inputSearchRecette__loupe {
     position: absolute;
     background: url(../assets/icons/loupe.svg) center center / 100% 100%;
     width: 32.06px;
@@ -65,15 +65,15 @@ main {
     margin-left: 15px;
     top: 17.5px;
     right: 17.5px;
-}
-
-/* --- Tri --- */ 
-.tri{
+  }
+  
+  /* --- Tri --- */
+  .tri {
     display: flex;
-}
-
-.elementTri{
-    background-color: #3282F7;
+  }
+  
+  .elementTri {
+    background-color: #3282f7;
     color: white;
     padding: 23px;
     font-size: 18px;
@@ -82,52 +82,49 @@ main {
     left: 80px;
     margin-right: 20px;
     margin-bottom: 25px;
-}
-
-.elementTri2{
-    background-color:#68D9A4;
-}
-
-.elementTri3{
-    background-color: #ED6454;
-}
-
-.elementTri__flex{
+  }
+  
+  .elementTri2 {
+    background-color: #68d9a4;
+  }
+  
+  .elementTri3 {
+    background-color: #ed6454;
+  }
+  
+  .elementTri__flex {
     display: flex;
     align-items: center;
     position: relative;
-}
-/* --- inputTri --- */ 
-.elementTri__input{
-    border:none;
-    background-image:none;
-    background-color:transparent;
+  }
+  /* --- inputTri --- */
+  .elementTri__input {
+    border: none;
+    background-image: none;
+    background-color: transparent;
     box-shadow: none;
     outline: none;
     color: white;
-}
-
-.elementTri__input::placeholder{ 
+  }
+  
+  .elementTri__input::placeholder {
     color: white;
-}
-
-/*.elementTri__text{
-}*/
-
-.elementTri__arrow{
+  }
+  
+  .elementTri__arrow {
     background: url(../assets/icons/arrowBottom.svg) center center / 100% 100%;
     width: 16px;
     height: 9.88px;
     margin-left: 15px;
     transition: 0.2s;
-}
-.elementTri__arrow--rotate {
+  }
+  .elementTri__arrow--rotate {
     transform: rotate(180deg);
-}
-
-.elementTri__dropdown {
-    position: absolute; 
-    background-color: #3282F7;
+  }
+  
+  .elementTri__dropdown {
+    position: absolute;
+    background-color: #3282f7;
     width: 100%;
     padding: 23px;
     left: -23px;
@@ -135,23 +132,39 @@ main {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     display: none;
-}
-
-.elementTri__dropdown2{
-    background-color:#68D9A4;
-}
-
-.elementTri__dropdown3{
-    background-color: #ED6454;
-}
-
-.elementTri__dropdown--active {
+  }
+  
+  .elementTri__dropdown1 {
+    background-color: #3282f7;
+  }
+  .elementTri__dropdown2 {
+    background-color: #68d9a4;
+  }
+  
+  .elementTri__dropdown3 {
+    background-color: #ed6454;
+  }
+  
+  .elementTri__dropdown--active {
     display: block;
-}
-
-/* --- elementIngrédient/Appareils/Ustensils --- */ 
-.elementIngrédient{
-    background-color: #3282F7;
+  }
+  
+  .input__list {
+    text-transform: capitalize;
+  }
+  
+  .input__list li {
+    cursor: pointer;
+      margin: 5px;
+      padding: 5px;
+  }
+  
+  .input__list li:hover {
+      background-color: rgba(255,255,255, 0.1);
+  }
+  
+  /* --- elementIngrédient/Appareils/Ustensils --- */
+  .elementIngrédient {
     color: white;
     padding: 10px;
     padding-left: 20px;
@@ -161,98 +174,99 @@ main {
     left: 80px;
     margin-right: 20px;
     margin-bottom: 15px;
-}
-
-.elementIngrédient2{
-    background-color:#68D9A4;
-}
-
-.elementIngrédient3{
-    background-color: #ED6454;
-}
-
-.elementIngrédient__flex{
+  }
+  
+  .elementIngrédient2 {
+    background-color: #68d9a4;
+  }
+  
+  .elementIngrédient3 {
+    background-color: #ed6454;
+  }
+  
+  .elementIngrédient__flex {
     display: flex;
     align-items: center;
-}
-
-/*.elementIngrédient__text{
-}*/
-
-.elementIngrédient__arrow{
+  }
+  
+  /*.elementIngrédient__text{
+  }*/
+  
+  .elementIngrédient__arrow {
     background: url(../assets/icons/cross.svg) center center / 100% 100%;
     width: 20px;
     height: 20px;
     margin-left: 13px;
     margin-right: 8px;
-}
-
-/* --- CardsRecette --- */ 
-.cardsRecette{
+  }
+  
+  /* --- CardsRecette --- */
+  .cardsRecette {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.cardRecette{
-    background-color: #E7E7E7;
+  }
+  
+  .cardRecette {
+    background-color: #e7e7e7;
     width: 380px;
     margin-bottom: 50px;
     border-radius: 5px;
     overflow: hidden;
-}
-
-.cardRecette__image{
+  }
+  
+  .cardRecette__image {
     height: 178px;
-    background-color: #C7BEBE;
-}
-
-.cardRecette__text{
+    background-color: #c7bebe;
+  }
+  
+  .cardRecette__text {
     height: 146px;
     padding: 20px;
-}
-/**/
-.cText__header{
+  }
+  /**/
+  .cText__header {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-.cHeader__titleRecette{
+  }
+  
+  .cHeader__titleRecette {
     font-weight: 400;
-}
-
-.cHeader__time{
+  }
+  
+  .cHeader__time {
     display: flex;
-}
-
-.clock{
+  }
+  
+  .clock {
     background: url(../assets/icons/clock.svg) center center / 100% 100%;
     width: 20px;
     height: 20px;
     margin-left: 13px;
     margin-right: 8px;
-}
-
-.min{
+  }
+  
+  .min {
     font-weight: 700;
-}
-
-.cText__main{
+  }
+  
+  .cText__main {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-}
-
-/*.cMain__ingredients{
-
-}*/
-
-.cMain__description{
+  }
+  
+  /*.cMain__ingredients{
+  
+  }*/
+  
+  .cMain__description {
     width: 40%;
-}
-
-.gras{
+  }
+  
+  .gras {
     font-weight: bold;
-}
+  }
+  

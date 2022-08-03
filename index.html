@@ -25,27 +25,17 @@
         <!--Tri-->
         <div class="triAll">
             <!--Tri ingrégients sélectionné-->
-            <div class="tri">
-                <!--ElementIngrédient1-->
-                <div class="elementIngrédient">
-                    <div class="elementIngrédient__flex">
-                        <p class="elementIngrédient__text">Coco</p>
-                        <div class="elementIngrédient__arrow"></div>
-                    </div>
-                    <!--<p class="elementTri__text">Date</p>
-                    <p class="elementTri__text">Titre</p>-->
-                    </div>
-            </div>
+            <div class="tri"></div>
             <!--Tri ingrégients à sélectionner-->
             <div class="tri">
                 <!--Element1-->
                 <div class="elementTri">
                     <div class="elementTri__flex">
-                        <input class="elementTri__input" type="text" name="ingredient" id="ingredient" placeholder="Ingrédients">
+                        <input class="elementTri__input" type="text" name="ingredient" id="ingredient" placeholder="Ingrédients" autocomplete="off">
                         <div class="elementTri__arrow"></div>
                         <div class="elementTri__dropdown">
-                        <ul></ul>
-                    </div>
+                            <ul class="input__list ingredient-list"></ul>
+                        </div>
                 </div>
                 <!--<p class="elementTri__text">Date</p>
                 <p class="elementTri__text">Titre</p>-->
@@ -56,7 +46,7 @@
                         <input class="elementTri__input" type="text" name="appareil" id="appareil" placeholder="Appareils">
                         <div class="elementTri__arrow elementTri__arrow2"></div>
                         <div class="elementTri__dropdown elementTri__dropdown2"></div>
-                        <ul></ul>
+                        <ul class='input__list appareil-list'></ul>
                     </div>
                 </div>
                 <!--Element3-->
@@ -65,7 +55,7 @@
                         <input class="elementTri__input" type="text" name="ustensile" id="ustensile" placeholder="Ustensiles">
                         <div class="elementTri__arrow elementTri__arrow3"></div>
                         <div class="elementTri__dropdown elementTri__dropdown3"></div>
-                        <ul></ul>
+                        <ul class="input__list ustensile-list"></ul>
                     </div>
                 </div>
             </div>

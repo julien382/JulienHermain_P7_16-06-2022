@@ -1,12 +1,31 @@
-const createCard = (recipe) => {
-    const cardTag = document.createElement('div');
-    cardTag.classList.add('cardRecette')
+export const createTag = (text, type) => {
+    const tag = document.createElement('div');
+    tag.classList.add('elementIngrédient');
 
-    const cardTag__text = document.createElement('div');
-    cardTag__text.classList.add('cardTag__text')
+    if (type === 'ingredient') {
+        tag.classList.add('elementTri__dropdown1');
+    }
+    if (type === 'appareil') {
+        tag.classList.add('elementTri__dropdown2');
+    }
+    if (type === 'ustensil') {
+        tag.classList.add('elementTri__dropdown3');
+    }
 
+    const content = document.createElement('div');
+    content.classList.add('elementIngrédient__flex');
 
-    cardTag.append(cardTag__text)
+    const p = document.createElement('p');
+    p.classList.add('elementIngrédient__text');
 
-    return cardTag;
-};
+    const arrow = document.createElement('div');
+    arrow.classList.add('elementIngrédient__arrow');
+
+    p.innerHTML = text;
+    content.appendChild(p);
+    content.appendChild(arrow);
+    tag.appendChild(content);
+
+    const triDom = document.querySelector('.tri');
+    triDom.appendChild(tag);
+}

@@ -3,10 +3,8 @@ export const getAllAppareils = (allRecipies) => {
 
     allRecipies.forEach(recipe => {
         if (recipe.display === true) {
-            recipe.appareils.forEach(appareil => {
-                const appareilName = appareil.appareil.toLowerCase();
-                ingredients.push(appareilName);
-            })
+            const appareilName = recipe.appliance.toLowerCase();
+            appareils.push(appareilName);
         }
     });
 
