@@ -1,4 +1,5 @@
 import { getAllAppareils } from "./data/getAllAppareils.js"
+import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 
 export const handleInputAppareil = () => {
@@ -13,17 +14,33 @@ export const handleInputAppareil = () => {
 
     const dropdown = inputContainer.querySelector('.elementTri__dropdown')
     dropdown.classList.add('elementTri__dropdown2')
+    const list = inputContainer.querySelector('.appareil-list')
 
     // remplir la dropdown
     const allRecipies = getLocalStorage();
-    const allAppareils = getAllAppareils(allRecipies); // ['pomme', 'poire', 'fraise']
+    const allAppareils = getAllAppareils(allRecipies); // ['blender', 'saladier', 'cocotte']
 
 
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
     // <li>*ingredient*</li>
     // !! bien penser à vider la dropdown à chaque fois !!
+    list.innerHTML = '';
 
-    console.log(allAppareils);
+    allAppareils.forEach(appareil => {
+      const liDropdown = document.createElement('li');      
+      liDropdown.innerHTML = appareil;
+      list.appendChild(liDropdown);
+
+      liDropdown.addEventListener('click', () => {
+        createTag(appareil, 'appareil')
+        
+        // [TODO] changer le nom allRecipes
+        // filterRecipiesByIngredient(ingredient)
+        // const allRecipies = getLocalStorage();
+        // displayRecipes(allRecipies)
+      })
+
+    });
 
     dropdown.classList.toggle('elementTri__dropdown--active')
   })

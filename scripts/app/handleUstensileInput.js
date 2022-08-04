@@ -16,7 +16,7 @@ export const handleInputUstensile = () => {
 
     // remplir la dropdown
     const allRecipies = getLocalStorage();
-    const allUstensiles = getAllUstensiles(allRecipies); // ['pomme', 'poire', 'fraise']
+    const allUstensiles = getAllUstensiles(allRecipies); // ['passoire', 'verres', 'couteau']
 
 
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
