@@ -21,8 +21,8 @@ export const handleInputAppareil = () => {
     const allAppareils = getAllAppareils(allRecipies); // ['blender', 'saladier', 'cocotte']
 
 
-    // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
-    // <li>*ingredient*</li>
+    // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
+    // <li>*appareil*</li>
     // !! bien penser à vider la dropdown à chaque fois !!
     list.innerHTML = '';
 
@@ -35,7 +35,7 @@ export const handleInputAppareil = () => {
         createTag(appareil, 'appareil')
         
         // [TODO] changer le nom allRecipes
-        // filterRecipiesByIngredient(ingredient)
+        // filterRecipiesByAppareil(appareil)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
       })
