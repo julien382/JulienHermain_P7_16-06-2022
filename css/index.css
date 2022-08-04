@@ -192,7 +192,7 @@ body {
   /*.elementIngrédient__text{
   }*/
   
-  .elementIngrédient__arrow {
+  .elementIngrédient__cross {
     background: url(../assets/icons/cross.svg) center center / 100% 100%;
     width: 20px;
     height: 20px;

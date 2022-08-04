@@ -18,14 +18,18 @@ export const createTag = (text, type) => {
     const p = document.createElement('p');
     p.classList.add('elementIngrédient__text');
 
-    const arrow = document.createElement('div');
-    arrow.classList.add('elementIngrédient__arrow');
+    const cross = document.createElement('div');
+    cross.classList.add('elementIngrédient__cross');
 
     p.innerHTML = text;
     content.appendChild(p);
-    content.appendChild(arrow);
+    content.appendChild(cross);
     tag.appendChild(content);
 
     const triDom = document.querySelector('.tri');
     triDom.appendChild(tag);
+    
+    cross.addEventListener('click', () => {
+        tag.remove()
+      })
 }
