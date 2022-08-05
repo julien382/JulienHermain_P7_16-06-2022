@@ -1,6 +1,7 @@
 import { getAllIngredients } from "./data/getAllIngredients.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
+import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient"
 
 export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri')
@@ -40,6 +41,9 @@ export const handleInputIngredient = () => {
         // filterRecipiesByIngredient(ingredient)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
+        filterRecipiesByIngredient(ingredient)
+        const allRecettes = getLocalStorage();
+        displayRecipes(allRecettes)
       })
     });
     console.log(allIngredients);

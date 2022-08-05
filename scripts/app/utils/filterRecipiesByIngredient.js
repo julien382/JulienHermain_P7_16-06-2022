@@ -1,7 +1,7 @@
 import { getAllIngredients } from "./data/getAllIngredients.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 
-const filterRecipesByIngredient = (ingredient) => {
+export const filterRecipiesByIngredient = (ingredient) => {
     // 1 - récupérer toutes les recettes (allRecipies)
     const allRecipies = getLocalStorage();
     const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
