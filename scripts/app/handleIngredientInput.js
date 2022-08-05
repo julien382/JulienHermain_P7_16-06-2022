@@ -4,19 +4,18 @@ import { getLocalStorage } from "./utils/localStorage.js"
 
 export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri')
-
+  const arrow = inputContainer.querySelector('.elementTri__arrow')
+  const dropdown = document.querySelector('.elementTri__dropdown')
+  
   inputContainer.addEventListener('click', () => {
-    const arrow = inputContainer.querySelector('.elementTri__arrow')
-    arrow.classList.toggle('elementTri__arrow--rotate')
-
+    
     const input = inputContainer.querySelector('.elementTri__input')
-    input.focus()
+    //input.focus()
 
-    input.addEventListener('click', () => {
+    input.addEventListener('focus', () => {
       input.placeholder = 'Rechercher un ingrédient';
     })
 
-    const dropdown = document.querySelector('.elementTri__dropdown')
     const list = inputContainer.querySelector('.ingredient-list')
 
     // remplir la dropdown
@@ -42,9 +41,12 @@ export const handleInputIngredient = () => {
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
       })
-
     });
-    dropdown.classList.toggle('elementTri__dropdown--active')
+
   })
 
+  arrow.addEventListener('click', () => {
+    arrow.classList.toggle('elementTri__arrow--rotate')
+    dropdown.classList.toggle('elementTri__dropdown--active')
+  })
 }
