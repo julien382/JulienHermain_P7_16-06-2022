@@ -23,11 +23,11 @@ export const handleInputIngredient = () => {
     const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
 
 
-    // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
-    // <li>*ingredient*</li>
     // !! bien penser à vider la dropdown à chaque fois !!
     list.innerHTML = '';
-
+    
+    // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
+    // <li>*ingredient*</li>
     allIngredients.forEach(ingredient => {
       const liDropdown = document.createElement('li');      
       liDropdown.innerHTML = ingredient;
@@ -45,6 +45,7 @@ export const handleInputIngredient = () => {
 
   })
 
+  // rotate de la flèche et ajout de la dropdown (avec les éléments li)
   arrow.addEventListener('click', () => {
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')

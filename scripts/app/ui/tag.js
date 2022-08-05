@@ -2,6 +2,7 @@ export const createTag = (text, type) => {
     const tag = document.createElement('div');
     tag.classList.add('elementIngrédient');
 
+    // changement de la couleur par rapport au type de l'input
     if (type === 'ingredient') {
         tag.classList.add('elementTri__dropdown1');
     }
@@ -29,6 +30,7 @@ export const createTag = (text, type) => {
     const triDom = document.querySelector('.tri');
     triDom.appendChild(tag);
     
+    // suppression du tag au clic sur la croix
     cross.addEventListener('click', () => {
         tag.remove()
       })
