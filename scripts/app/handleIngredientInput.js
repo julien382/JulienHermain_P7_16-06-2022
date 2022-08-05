@@ -10,7 +10,7 @@ export const handleInputIngredient = () => {
   inputContainer.addEventListener('click', () => {
     
     const input = inputContainer.querySelector('.elementTri__input')
-    //input.focus()
+    /*input.focus()*/
 
     input.addEventListener('focus', () => {
       input.placeholder = 'Rechercher un ingrédient';
