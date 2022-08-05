@@ -1,7 +1,8 @@
+import { displayRecipies } from "../app/displayRecipies.js";
 import { getAllIngredients } from "./data/getAllIngredients.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
-import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient"
+import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
 
 export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri')
@@ -37,13 +38,13 @@ export const handleInputIngredient = () => {
       liDropdown.addEventListener('click', () => {
         createTag(ingredient, 'ingredient')
         
-        // [TODO] changer le nom allRecipes
+        // [TODO]
         // filterRecipiesByIngredient(ingredient)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
         filterRecipiesByIngredient(ingredient)
         const allRecettes = getLocalStorage();
-        displayRecipes(allRecettes)
+        displayRecipies(allRecettes)
       })
     });
     console.log(allIngredients);
