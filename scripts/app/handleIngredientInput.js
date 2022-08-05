@@ -12,6 +12,10 @@ export const handleInputIngredient = () => {
     const input = inputContainer.querySelector('.elementTri__input')
     input.focus()
 
+    input.addEventListener('click', () => {
+      input.placeholder = 'Rechercher un ingrédient';
+    })
+
     const dropdown = document.querySelector('.elementTri__dropdown')
     const list = inputContainer.querySelector('.ingredient-list')
 
