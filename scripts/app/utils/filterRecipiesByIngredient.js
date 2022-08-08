@@ -1,5 +1,5 @@
-import { getAllIngredients } from "./data/getAllIngredients.js"
-import { getLocalStorage } from "./utils/localStorage.js"
+//import { getAllIngredients } from "./data/getAllIngredients.js"
+//import { getLocalStorage } from "./utils/localStorage.js"
 
 export const filterRecipiesByIngredient = (ingredient) => {
     // 1 - récupérer toutes les recettes (allRecipies)

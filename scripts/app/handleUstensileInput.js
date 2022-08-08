@@ -1,19 +1,23 @@
+import { displayRecipies } from "../app/displayRecipies.js";
 import { getAllUstensiles } from "./data/getAllUstensiles.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
+import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
 
 export const handleInputUstensile = () => {
   const inputContainer = document.querySelector('.elementTri3')
+  const arrow = inputContainer.querySelector('.elementTri__arrow')
+  const dropdown = document.querySelector('.elementTri__dropdown3')
 
   inputContainer.addEventListener('click', () => {
-    const arrow = inputContainer.querySelector('.elementTri__arrow3')
-    arrow.classList.toggle('elementTri__arrow--rotate')
 
     const input = inputContainer.querySelector('.elementTri__input')
-    input.focus()
+    /*input.focus()*/
 
-    const dropdown = inputContainer.querySelector('.elementTri__dropdown')
-    dropdown.classList.add('elementTri__dropdown3')
+    input.addEventListener('focus', () => {
+      input.placeholder = 'Rechercher un ustensile';
+    })
+
     const list = inputContainer.querySelector('.ustensile-list')
 
     // remplir la dropdown
@@ -21,11 +25,11 @@ export const handleInputUstensile = () => {
     const allUstensiles = getAllUstensiles(allRecipies); // ['passoire', 'verres', 'couteau']
 
 
-    // boucle sur  allUstensile afin d'insérer les éléments dans la dropdown
-    // <li>*ustensile*</li>
     // !! bien penser à vider la dropdown à chaque fois !!
     list.innerHTML = '';
-
+    
+    // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
+    // <li>*ingredient*</li>
     allUstensiles.forEach(ustensile => {
       const liDropdown = document.createElement('li');      
       liDropdown.innerHTML = ustensile;
@@ -38,11 +42,17 @@ export const handleInputUstensile = () => {
         // filterRecipiesByUstensile(ustensile)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
+        filterRecipiesByIngredient(ingredient)
+        const allRecettes = getLocalStorage();
+        displayRecipies(allRecettes)
       })
-
     });
-
-    dropdown.classList.toggle('elementTri__dropdown--active')
+    console.log(allIngredients);
   })
 
+  // rotate de la flèche et ajout de la dropdown (avec les éléments li)
+  arrow.addEventListener('click', () => {
+    arrow.classList.toggle('elementTri__arrow--rotate')
+    dropdown.classList.toggle('elementTri__dropdown--active')
+  })
 }
