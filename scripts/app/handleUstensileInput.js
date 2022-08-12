@@ -2,7 +2,7 @@ import { displayRecipies } from "../app/displayRecipies.js";
 import { getAllUstensiles } from "./data/getAllUstensiles.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
-import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
+import { filterRecipiesByUstensile } from "./utils/filterRecipiesByUstensile.js"
 
 export const handleInputUstensile = () => {
   const inputContainer = document.querySelector('.elementTri3')
@@ -38,7 +38,7 @@ export const handleInputUstensile = () => {
       liDropdown.addEventListener('click', () => {
         createTag(ustensile, 'ustensile')
         
-        // [TODO] changer le nom allRecipes
+        // [TODO]
         // filterRecipiesByUstensile(ustensile)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)

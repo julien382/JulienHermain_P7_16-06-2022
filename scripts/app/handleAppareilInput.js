@@ -2,7 +2,7 @@ import { displayRecipies } from "../app/displayRecipies.js";
 import { getAllAppareils } from "./data/getAllAppareils.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
-import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
+import { filterRecipiesByAppareil } from "./utils/filterRecipiesByAppareil.js"
 
 export const handleInputAppareil = () => {
   const inputContainer = document.querySelector('.elementTri2')
@@ -38,7 +38,7 @@ export const handleInputAppareil = () => {
       liDropdown.addEventListener('click', () => {
         createTag(appareil, 'appareil')
         
-        // [TODO] changer le nom allRecipes
+        // [TODO]
         // filterRecipiesByAppareil(appareil)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)

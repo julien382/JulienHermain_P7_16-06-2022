@@ -5,10 +5,10 @@ export const filterRecipiesByAppareil = (appareil) => {
     // 1 - récupérer toutes les recettes (allRecipies)
     const allRecipies = getLocalStorage();
 
-    // 2 - boucler sur les allRecettes
+    // 2 - boucler sur les allRecipies
     allRecipies.forEach(recipe => {
       // 3 - voir si dans chaque recettes l'ingrédient est présent dans la liste d'ingrédients
-      const appareilRecette = recipe.ingredients.map(element => element.appareil.toLowerCase())
+      const appareilRecette = recipe.appliance.toLowerCase()
       
       // 4 - si oui, display = true 
       // 5 - sinon, display = false
