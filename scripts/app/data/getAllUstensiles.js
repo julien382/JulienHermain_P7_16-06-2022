@@ -4,8 +4,8 @@ export const getAllUstensiles = (allRecipies) => {
     allRecipies.forEach(recipe => {
         if (recipe.display === true) {
             recipe.ustensils.forEach(ustensile => {
-                const ustensileName = ustensile.ustensils.toLowerCase();
-                ustensile.push(ustensileName);
+                const ustensileName = ustensile.toLowerCase();
+                ustensiles.push(ustensileName);
             })
         }
     });

@@ -47,7 +47,6 @@ export const handleInputUstensile = () => {
         displayRecipies(allRecettes)
       })
     });
-    console.log(allIngredients);
   })
 
   // rotate de la flèche et ajout de la dropdown (avec les éléments li)
