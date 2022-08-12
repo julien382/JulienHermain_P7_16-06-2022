@@ -42,13 +42,12 @@ export const handleInputAppareil = () => {
         // filterRecipiesByAppareil(appareil)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
-        filterRecipiesByIngredient(ingredient)
-        const allRecettes = getLocalStorage();
-        displayRecipies(allRecettes)
+        filterRecipiesByAppareil(appareil)
+        const allRecipiesAppareil = getLocalStorage();
+        displayRecipies(allRecipiesAppareil)
       })
 
     });
-    console.log(allIngredients);
   })
 
    // rotate de la flèche et ajout de la dropdown (avec les éléments li)

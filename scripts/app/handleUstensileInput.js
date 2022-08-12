@@ -42,11 +42,12 @@ export const handleInputUstensile = () => {
         // filterRecipiesByUstensile(ustensile)
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
-        filterRecipiesByIngredient(ingredient)
-        const allRecettes = getLocalStorage();
-        displayRecipies(allRecettes)
+        filterRecipiesByUstensile(ustensile)
+        const allRecipiesUstensile = getLocalStorage();
+        displayRecipies(allRecipiesUstensile)
       })
     });
+    
   })
 
   // rotate de la flèche et ajout de la dropdown (avec les éléments li)

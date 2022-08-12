@@ -43,11 +43,11 @@ export const handleInputIngredient = () => {
         // const allRecipies = getLocalStorage();
         // displayRecipes(allRecipies)
         filterRecipiesByIngredient(ingredient)
-        const allRecettes = getLocalStorage();
-        displayRecipies(allRecettes)
+        const allRecipiesIngredient = getLocalStorage();
+        displayRecipies(allRecipiesIngredient)
       })
     });
-    console.log(allIngredients);
+    
   })
 
   // rotate de la flèche et ajout de la dropdown (avec les éléments li)
