@@ -223,6 +223,7 @@ body {
   .cardRecette__text {
     height: 146px;
     padding: 20px;
+    height: 180px;
   }
   /**/
   .cText__header {
@@ -256,6 +257,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
+    height: 77%;
   }
   
   /*.cMain__ingredients{
@@ -264,8 +266,17 @@ body {
   
   .cMain__description {
     width: 40%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
   }
-  
+
+  .cMain__description > p{
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+            
   .gras {
     font-weight: bold;
   }
