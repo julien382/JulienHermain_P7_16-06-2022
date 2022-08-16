@@ -45,6 +45,8 @@ export const handleInputIngredient = () => {
         filterRecipiesByIngredient(ingredient)
         const allRecipiesIngredient = getLocalStorage();
         displayRecipies(allRecipiesIngredient)
+        //list.remove()
+        dropdown.remove('elementTri__dropdown--active')
       })
     });
     
