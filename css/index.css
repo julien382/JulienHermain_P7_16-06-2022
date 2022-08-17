@@ -82,6 +82,7 @@ body {
     left: 80px;
     margin-right: 20px;
     margin-bottom: 25px;
+    position: relative;
   }
   
   .elementTri2 {
