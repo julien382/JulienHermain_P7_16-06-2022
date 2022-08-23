@@ -6,7 +6,7 @@ import { filterRecipiesByAppareil } from "./utils/filterRecipiesByAppareil.js"
 
 export const handleInputAppareil = () => {
   const inputContainer = document.querySelector('.elementTri__flex2')
-  const arrow = inputContainer.querySelector('.elementTri__arrow')
+  const arrow = inputContainer.querySelector('.elementTri__arrow2')
   const dropdown = document.querySelector('.elementTri__dropdown2')
 
   inputContainer.addEventListener('click', () => {

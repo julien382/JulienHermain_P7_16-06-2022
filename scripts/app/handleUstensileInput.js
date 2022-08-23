@@ -6,7 +6,7 @@ import { filterRecipiesByUstensile } from "./utils/filterRecipiesByUstensile.js"
 
 export const handleInputUstensile = () => {
   const inputContainer = document.querySelector('.elementTri__flex3')
-  const arrow = inputContainer.querySelector('.elementTri__arrow')
+  const arrow = inputContainer.querySelector('.elementTri__arrow3')
   const dropdown = document.querySelector('.elementTri__dropdown3')
 
   inputContainer.addEventListener('click', () => {
