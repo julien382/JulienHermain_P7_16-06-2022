@@ -127,9 +127,9 @@ body {
     position: absolute;
     background-color: #3282f7;
     width: 100%;
-    padding: 23px;
-    left: -23px;
-    top: 36px;
+    padding: 0px;
+    left: 0px;
+    top: 40px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     display: none;
@@ -156,8 +156,10 @@ body {
   
   .input__list li {
     cursor: pointer;
-      margin: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       padding: 5px;
+      padding-left: 23px;
   }
   
   .input__list li:hover {
