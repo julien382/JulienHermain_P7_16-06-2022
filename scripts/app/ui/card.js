@@ -31,9 +31,27 @@ export const createCard = (recipe) => {
   const cMain__ingredients = document.createElement('div');
   cMain__ingredients.classList.add('cMain__ingredients')
 
-  const gras = document.createElement('p');
-  gras.classList.add('gras')
-  gras.textContent = recipe.ingredients.ingredient + recipe.ingredients.quantity + recipe.ingredients.unit
+    recipe.ingredients.forEach(ingredient => {
+      const gras = document.createElement('p');
+      gras.classList.add('gras')
+      if (ingredient.unit && ingredient.quantity){
+        gras.textContent = ingredient.ingredient + " : " + ingredient.quantity + " "+ ingredient.unit
+      }
+      else if (!ingredient.unit && !ingredient.quantity) {
+        gras.textContent = ingredient.ingredient
+      }
+      else if(!ingredient.unit){
+        gras.textContent = ingredient.ingredient + " : " + ingredient.quantity
+      }
+      else if (!ingredient.quantity){
+        gras.textContent = ingredient.ingredient + " : " + ingredient.unit
+      }
+      cMain__ingredients.append(gras)
+      
+    });
+
+  console.log(recipe);
+
   const cMain__description = document.createElement('div');
   cMain__description.classList.add('cMain__description')
 
@@ -51,7 +69,6 @@ export const createCard = (recipe) => {
 
   cardRecette.append(cardRecette__text)
 
-  cMain__ingredients.append(gras)
   cText__main.append(cMain__ingredients)
 
   cMain__description.append(p)
