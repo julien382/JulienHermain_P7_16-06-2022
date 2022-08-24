@@ -32,7 +32,7 @@ export const handleInputAppareil = () => {
     // tags = ['fraise', 'kiwi']
     // appareils tout display allAppareils - tags
 
-    // allAppareils de la boucle (ligne 38) le modifier (le nom) par ce que j'ai créer étape 2
+    // allAppareils de la boucle (ligne 38) le modifier (le nom)
    
     // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
     allAppareils.forEach(appareil => {
