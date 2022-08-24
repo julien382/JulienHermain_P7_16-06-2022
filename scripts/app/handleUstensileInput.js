@@ -18,21 +18,14 @@ export const handleInputUstensile = () => {
     dropdown.classList.toggle('elementTri__dropdown--active')
     console.log(dropdown);
     // !! bien penser à vider la dropdown à chaque fois !!
-    const list = inputContainer.querySelector('.ustensile-list')
+    const list = document.querySelector('.ustensile-list')
     list.innerHTML = '';
 
     // remplir la dropdown
     const allRecipies = getLocalStorage();
     const allUstensiles = getAllUstensiles(allRecipies); // ['passoire', 'verres', 'couteau']
 
-    // supprimer les ustensiles qui sont dans les tags
-    // 1- récp tout le contenu (div.innerText) des tags ustensiles
-    // 2- retirer les ustensiles de allUstensiles qu'on a enlever à l'etape 1
-    // allUstensiles = ['pomme', 'poire', 'fraise', 'ananas', 'kiwi']
-    // tags = ['fraise', 'kiwi']
-    // ustensile tout display allUstensiles - tags
-
-    // allUstensiles de la boucle (ligne 38) le modifier (le nom) par ce que j'ai créer étape 2
+ 
     
     // boucle sur  allUstensiles afin d'insérer les éléments dans la dropdown
     allUstensiles.forEach(ustensile => {

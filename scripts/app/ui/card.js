@@ -50,8 +50,6 @@ export const createCard = (recipe) => {
       
     });
 
-  console.log(recipe);
-
   const cMain__description = document.createElement('div');
   cMain__description.classList.add('cMain__description')
 

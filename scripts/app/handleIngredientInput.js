@@ -25,15 +25,6 @@ export const handleInputIngredient = () => {
     const allRecipies = getLocalStorage();
     const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
 
-    // supprimer les ingrédients qui sont dans les tags
-    // 1- récup tout le contenu (div.innerText) des tags ingrédients
-    console.log(list.innerHTML); 
-    // 2- retirer les ingrédients de allIngredient qu'on a enlever à l'etape 1
-    // allIngredients = ['pomme', 'poire', 'fraise', 'ananas', 'kiwi']
-    // tags = ['fraise', 'kiwi']
-    // ingredient tout display allIngredient - tags
-
-    // allIngredient de la boucle (ligne 38) le modifier (le nom) par ce que j'ai créer étape 2
     
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
     allIngredients.forEach(ingredient => {

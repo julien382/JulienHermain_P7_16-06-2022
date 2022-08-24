@@ -18,21 +18,14 @@ export const handleInputAppareil = () => {
     dropdown.classList.toggle('elementTri__dropdown--active')
     console.log(dropdown);
     // !! bien penser à vider la dropdown à chaque fois !!
-    const list = inputContainer.querySelector('.appareil-list')
+    const list = document.querySelector('.appareil-list')
     list.innerHTML = '';
 
     // remplir la dropdown
     const allRecipies = getLocalStorage();
     const allAppareils = getAllAppareils(allRecipies); // ['blender', 'saladier', 'cocotte']
 
-    // supprimer les appareils qui sont dans les tags
-    // 1- récup tout le contenu (div.innerText) des tags appareils
-    // 2- retirer les appareils de allAppareils qu'on a enlever à l'etape 1
-    // allAppareils = ['pomme', 'poire', 'fraise', 'ananas', 'kiwi']
-    // tags = ['fraise', 'kiwi']
-    // appareils tout display allAppareils - tags
-
-    // allAppareils de la boucle (ligne 38) le modifier (le nom)
+    
    
     // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
     allAppareils.forEach(appareil => {
@@ -46,6 +39,7 @@ export const handleInputAppareil = () => {
         filterRecipiesByAppareil(appareil)
         const allRecipiesAppareil = getLocalStorage();
         displayRecipies(allRecipiesAppareil)
+        console.log(allRecipiesAppareil);
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.toggle('elementTri__dropdown--active')

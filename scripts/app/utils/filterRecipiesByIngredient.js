@@ -11,22 +11,20 @@ export const filterRecipiesByIngredient = (ingredient) => {
     // 2 - boucler sur les allRecettes
     allRecipies.forEach(recipe => {
       // 3 - voir si dans chaque recettes l'ingrédient est présent dans la liste d'ingrédients
-      const ingredientRecette = recipe.ingredients.map(element => element.ingredient.toLowerCase())
-      
-      // 4 - si oui, display = true 
-      // 5 - sinon, display = false
-      console.log(ingredientRecette.includes(ingredient));
-      if (ingredientRecette.includes(ingredient)){
-        recipe.display = true
-      }
-      else{
-        recipe.display = false
-      }
-    })
+      if (recipe.display == true){
+        const ingredientRecette = recipe.ingredients.map(element => element.ingredient.toLowerCase())
 
-    // 6 - sauvegarder dans le localStorage le nouveau allRecipies
-    setLocalStorage(allRecipies)
-  
+        if (ingredientRecette.includes(ingredient)){
+          recipe.display = true
+        }
+        else{
+          recipe.display = false
+        }
+      }
+
+      setLocalStorage(allRecipies)
+    })
+      
     // indexOf()
     // includes()
     // find()
