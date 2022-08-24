@@ -276,8 +276,7 @@ body {
 
   .cMain__description > p{
     white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: auto;
   }
             
   .gras {
