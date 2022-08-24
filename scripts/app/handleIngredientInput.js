@@ -27,6 +27,7 @@ export const handleInputIngredient = () => {
 
     // supprimer les ingrédients qui sont dans les tags
     // 1- récup tout le contenu (div.innerText) des tags ingrédients
+    console.log(list.innerHTML); 
     // 2- retirer les ingrédients de allIngredient qu'on a enlever à l'etape 1
     // allIngredients = ['pomme', 'poire', 'fraise', 'ananas', 'kiwi']
     // tags = ['fraise', 'kiwi']
