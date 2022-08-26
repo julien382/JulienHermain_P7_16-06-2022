@@ -9,7 +9,7 @@ export const createTag = (text, type) => {
     if (type === 'appareil') {
         tag.classList.add('elementTri__dropdown2');
     }
-    if (type === 'ustensil') {
+    if (type === 'ustensile') {
         tag.classList.add('elementTri__dropdown3');
     }
 
