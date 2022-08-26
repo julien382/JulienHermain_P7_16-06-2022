@@ -192,8 +192,9 @@ body {
     align-items: center;
   }
   
-  /*.elementIngrédient__text{
-  }*/
+  .elementIngrédient__text{
+    text-transform : capitalize;
+  }
   
   .elementIngrédient__cross {
     background: url(../assets/icons/cross.svg) center center / 100% 100%;
