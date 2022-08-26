@@ -1,4 +1,3 @@
-import { getAllIngredients } from "../data/getAllIngredients.js";
 import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 
 
