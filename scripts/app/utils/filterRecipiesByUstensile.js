@@ -8,23 +8,23 @@ export const filterRecipiesByUstensile = (ustensile) => {
     // 2 - boucler sur les allRecipies
     allRecipies.forEach(recipe => {
       // 3 - voir si dans chaque recettes l'ingrédient est présent dans la liste d'ingrédients
-      if (recipe.display === true) {
-        recipe.ustensils.forEach(ustensile => {
-          const ustensileRecette = ustensile.toLowerCase()
-          
-          if (ustensileRecette.includes(ustensile)){
+      if (recipe.display == true) {
+        recipe.ustensils.forEach(ustensil => {
+          const ustensileRecette = ustensil.toLowerCase()
+
+          if (ustensileRecette === ustensile){
+            console.log(ustensile);
             recipe.display = true
             console.log(recipe);
           }
           else{
             recipe.display = false
-
           }
         })
         
       }
 
-      setLocalStorage(allRecipies)
     })
-
+    
+    setLocalStorage(allRecipies)
   }
