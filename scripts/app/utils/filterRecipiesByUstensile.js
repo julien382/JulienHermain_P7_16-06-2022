@@ -12,7 +12,8 @@ export const filterRecipiesByUstensile = (ustensile) => {
         recipe.ustensils.forEach(ustensil => {
           const ustensileRecette = ustensil.toLowerCase()
 
-          if (ustensileRecette === ustensile){
+          if (ustensileRecette == ustensile){
+            console.log(ustensileRecette);
             console.log(ustensile);
             recipe.display = true
             console.log(recipe);
