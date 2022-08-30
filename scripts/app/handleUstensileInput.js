@@ -39,6 +39,7 @@ export const handleInputUstensile = () => {
         filterRecipiesByUstensile(ustensile)
         const allRecipiesUstensile = getLocalStorage();
         displayRecipies(allRecipiesUstensile)
+        console.log(allRecipiesUstensile);
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.remove('elementTri__dropdown--active')
