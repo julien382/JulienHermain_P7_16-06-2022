@@ -17,7 +17,6 @@ export const handleInputIngredient = () => {
 
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')
-    console.log(dropdown);
     // !! bien penser à vider la dropdown à chaque fois !!
     const list = document.querySelector('.ingredient-list')
     list.innerHTML = '';
@@ -51,12 +50,13 @@ export const handleInputIngredient = () => {
 
     const inputIngredient = inputContainer.querySelector('.elementTri__inputIngredient')
     
-    inputIngredient.addEventListener('input', (eventInputIngredient) => {
+    inputIngredient.addEventListener('input', () => {
+      const value = inputIngredient.value 
 
-      search(eventInputIngredient)
+      search(value)
+      
       const allRecipiesIngredient = getLocalStorage();
       displayRecipies(allRecipiesIngredient)
-      console.log(eventInputIngredient);
     });
 
     

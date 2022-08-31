@@ -9,19 +9,12 @@ export const filterRecipiesByUstensile = (ustensile) => {
     allRecipies.forEach(recipe => {
       // 3 - voir si dans chaque recettes l'ingrédient est présent dans la liste d'ingrédients
       if (recipe.display == true) {
-        recipe.ustensils.forEach(ustensil => {
-          const ustensileRecette = ustensil.toLowerCase()
-
-          if (ustensileRecette == ustensile){
-            console.log(ustensileRecette);
-            console.log(ustensile);
-            recipe.display = true
-            console.log(recipe);
-          }
-          else{
-            recipe.display = false
-          }
-        })
+        if (recipe.ustensils.includes(ustensile)){
+          recipe.display = true
+        }
+        else{
+          recipe.display = false
+        }
         
       }
 

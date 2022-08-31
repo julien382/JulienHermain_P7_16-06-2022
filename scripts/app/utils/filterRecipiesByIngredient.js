@@ -11,7 +11,6 @@ export const filterRecipiesByIngredient = (ingredient) => {
       // 3 - voir si dans chaque recettes l'ingrédient est présent dans la liste d'ingrédients
       if (recipe.display == true){
         const ingredientRecette = recipe.ingredients.map(element => element.ingredient.toLowerCase())
-
         if (ingredientRecette.includes(ingredient)){
           recipe.display = true
         }
@@ -20,8 +19,8 @@ export const filterRecipiesByIngredient = (ingredient) => {
         }
       }
 
-      setLocalStorage(allRecipies)
     })
+    setLocalStorage(allRecipies)
       
     // indexOf()
     // includes()
