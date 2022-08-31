@@ -56,9 +56,9 @@ export const handleInputIngredient = () => {
       search(eventInputIngredient)
       const allRecipiesIngredient = getLocalStorage();
       displayRecipies(allRecipiesIngredient)
+      console.log(eventInputIngredient);
     });
 
-    console.log(eventInputIngredient);
     
   })
 
