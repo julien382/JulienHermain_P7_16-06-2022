@@ -1,7 +1,6 @@
 import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 
-
-export const search = (ingredient) => {
+export const search = (eventInputIngredient) => {
 
     const allRecipies = getLocalStorage();
 

@@ -45,36 +45,20 @@ export const handleInputIngredient = () => {
         dropdown.classList.remove('elementTri__dropdown--active')
       })
 
-      const inputIngredient = inputContainer.querySelector('.elementTri__inputIngredient')
       
-      const handleinputIngredient = (eventInputIngredient) => {
-
-        const allRecipies = getLocalStorage();
-
-        allRecipies.forEach(recipe => {
-
-          if (recipe.display == true){
-            const ingredientRecette = recipe.name.toLowerCase()
-
-            if (ingredientRecette.includes(eventInputIngredient)){
-              recipe.display = true
-              console.log(ingredientRecette);
-            }
-            else{
-              recipe.display = false
-            }
-          }
-
-        })
-
-      }
       
-      inputIngredient.addEventListener('input', handleinputIngredient);
-
-      //console.log(eventInputIngredient);
-
-
     });
+
+    const inputIngredient = inputContainer.querySelector('.elementTri__inputIngredient')
+    
+    inputIngredient.addEventListener('input', (eventInputIngredient) => {
+
+      search(eventInputIngredient)
+      const allRecipiesIngredient = getLocalStorage();
+      displayRecipies(allRecipiesIngredient)
+    });
+
+    console.log(eventInputIngredient);
     
   })
 
