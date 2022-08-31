@@ -47,12 +47,33 @@ export const handleInputIngredient = () => {
 
       const inputIngredient = inputContainer.querySelector('.elementTri__inputIngredient')
       
-      
-      inputIngredient.addEventListener('click', () => {
+      const handleinputIngredient = (eventInputIngredient) => {
 
-        search(ingredient)
-        
-      })
+        const allRecipies = getLocalStorage();
+
+        allRecipies.forEach(recipe => {
+
+          if (recipe.display == true){
+            const ingredientRecette = recipe.name.toLowerCase()
+
+            if (ingredientRecette.includes(eventInputIngredient)){
+              recipe.display = true
+              console.log(ingredientRecette);
+            }
+            else{
+              recipe.display = false
+            }
+          }
+
+        })
+
+      }
+      
+      inputIngredient.addEventListener('input', handleinputIngredient);
+
+      //console.log(eventInputIngredient);
+
+
     });
     
   })
