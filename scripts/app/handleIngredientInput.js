@@ -3,6 +3,7 @@ import { getAllIngredients } from "./data/getAllIngredients.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
+import { search } from "./utils/search.js"
 
 export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri__flex')
@@ -38,9 +39,19 @@ export const handleInputIngredient = () => {
         filterRecipiesByIngredient(ingredient)
         const allRecipiesIngredient = getLocalStorage();
         displayRecipies(allRecipiesIngredient)
+
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.remove('elementTri__dropdown--active')
+      })
+
+      const inputIngredient = inputContainer.querySelector('.elementTri__inputIngredient')
+      
+      
+      inputIngredient.addEventListener('click', () => {
+
+        search(ingredient)
+        
       })
     });
     
