@@ -4,6 +4,8 @@ import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
 import { search } from "./utils/search.js"
+import { searchAppareils } from "./utils/searchAppareils.js";
+import { searchUstensiles } from "./utils/searchUstensiles.js";
 
 export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri__flex')
@@ -59,8 +61,32 @@ export const handleInputIngredient = () => {
       displayRecipies(allRecipiesIngredient)
     });
 
+    const inputAppareils = inputContainer.querySelector('.elementTri__inputAppareils')
+    
+    inputAppareils.addEventListener('input', () => {
+      const value = inputAppareils.value 
+
+      searchAppareils(value)
+      
+      const allRecipiesIngredient = getLocalStorage();
+      displayRecipies(allRecipiesIngredient)
+    });
+
+    const inputUstensiles = inputContainer.querySelector('.elementTri__inputUstensiles')
+    
+    inputUstensiles.addEventListener('input', () => {
+      const value = inputUstensiles.value 
+
+      searchUstensiles(value)
+      
+      const allRecipiesIngredient = getLocalStorage();
+      displayRecipies(allRecipiesIngredient)
+    });
+
     
   })
+
+  
 
 
 }
