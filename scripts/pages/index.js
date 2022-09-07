@@ -5,6 +5,7 @@ import { getAllRecipies } from "../app/data/getAllRecipies.js";
 import { handleInputIngredient } from "../app/handleIngredientInput.js";
 import { handleInputAppareil } from "../app/handleAppareilInput.js";
 import { handleInputUstensile } from "../app/handleUstensileInput.js";
+import { handleMain } from "../app/handleMain.js";
 import { setLocalStorage } from "../app/utils/localStorage.js";
 
 const init = async () => {
@@ -25,6 +26,7 @@ const init = async () => {
     handleInputIngredient()
     handleInputAppareil()
     handleInputUstensile()
+    handleMain()
     // ....
 
 

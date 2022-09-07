@@ -3,7 +3,6 @@ import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 export const searchMain = (inputValue) => {
 
     const allRecipies = getLocalStorage();
-    console.log(allRecipies);
     
     if (inputValue.length >= 3){
         allRecipies.forEach(recipe => {
