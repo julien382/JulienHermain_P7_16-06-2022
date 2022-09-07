@@ -54,8 +54,8 @@ export const handleInputUstensile = () => {
 
       searchUstensiles(value)
       
-      const allRecipiesIngredient = getLocalStorage();
-      displayRecipies(allRecipiesIngredient)
+      const allRecipiesUstensile = getLocalStorage();
+      displayRecipies(allRecipiesUstensile)
     });
 
   })

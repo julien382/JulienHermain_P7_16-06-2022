@@ -1,4 +1,4 @@
-export const searchAppareils= (inputValue) => {
+export const searchAppareils = (inputValue) => {
     const lis = document.querySelectorAll(" div.elementTri__dropdown2.elementTri__dropdown--active > ul li")
     
     if (inputValue.length >= 3){

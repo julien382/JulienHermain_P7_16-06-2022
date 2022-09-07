@@ -4,6 +4,7 @@ import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 import { filterRecipiesByIngredient } from "./utils/filterRecipiesByIngredient.js"
 import { search } from "./utils/search.js"
+import { searchMain } from "./utils/searchMain_Recipies.js"
 
 export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri__flex')
@@ -58,6 +59,18 @@ export const handleInputIngredient = () => {
       const allRecipiesIngredient = getLocalStorage();
       displayRecipies(allRecipiesIngredient)
     });
+
+    const inputName = inputContainer.querySelector('.inputSearchRecette')
+    
+    inputName.addEventListener('input', () => {
+      const value = inputName.value 
+      console.log(value);
+      searchMain(value)
+      
+      const allRecipiesIngredient = getLocalStorage();
+      displayRecipies(allRecipiesIngredient)
+    });
+
     
   })
 

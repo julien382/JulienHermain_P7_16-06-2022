@@ -54,8 +54,8 @@ export const handleInputAppareil = () => {
 
       searchAppareils(value)
       
-      const allRecipiesIngredient = getLocalStorage();
-      displayRecipies(allRecipiesIngredient)
+      const allRecipiesAppareil = getLocalStorage();
+      displayRecipies(allRecipiesAppareil)
     });
 
   })
