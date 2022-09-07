@@ -1,24 +1,38 @@
 import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 
 export const searchMain = (inputValue) => {
-
     const allRecipies = getLocalStorage();
     
     if (inputValue.length >= 3){
-        allRecipies.forEach(recipe => {
-            if (recipe.display == true){
-                const nameRecette = recipe.name.toLowerCase()
-                console.log(nameRecette);
-
-                if (nameRecette.includes(inputValue)){
-                recipe.display = true
-                }
-                else{
-                recipe.display = false
-                }
+        const cards = document.querySelectorAll(".cardRecette")
+        
+        console.log("cards");
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase()
+            const id = card.id
+            
+            if (text.includes(inputValue)){
+                allRecipies.forEach(recette => {
+                    if (recette.id == id){
+                        recette.display = true
+                    }
+                })
             }
+            else{
+                allRecipies.forEach(recette => {
+                    if (recette.id == id){
+                        recette.display = false
+                    }
+                })
+            }
+            console.log(text);
+        }) 
 
-        })
-    setLocalStorage(allRecipies)
     }
-  }
+    else{
+        allRecipies.forEach(recette => {
+            recette.display = true
+        })
+    }
+    setLocalStorage(allRecipies)
+}

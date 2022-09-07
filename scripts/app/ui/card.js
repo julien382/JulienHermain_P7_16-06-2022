@@ -1,6 +1,7 @@
 export const createCard = (recipe) => {
   const cardRecette = document.createElement('div');
   cardRecette.classList.add('cardRecette')
+  cardRecette.id = recipe.id
 
   const cardRecette__image = document.createElement('div');
   cardRecette__image.classList.add('cardRecette__image')
