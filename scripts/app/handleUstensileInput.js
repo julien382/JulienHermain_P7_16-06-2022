@@ -3,6 +3,7 @@ import { getAllUstensiles } from "./data/getAllUstensiles.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 import { filterRecipiesByUstensile } from "./utils/filterRecipiesByUstensile.js"
+import { searchUstensiles } from "./utils/searchUstensiles.js";
 
 export const handleInputUstensile = () => {
   const inputContainer = document.querySelector('.elementTri__flex3')
@@ -46,6 +47,17 @@ export const handleInputUstensile = () => {
       })
     });
     
+    const inputUstensiles = inputContainer.querySelector('.elementTri__inputUstensiles')
+    
+    inputUstensiles.addEventListener('input', () => {
+      const value = inputUstensiles.value 
+
+      searchUstensiles(value)
+      
+      const allRecipiesIngredient = getLocalStorage();
+      displayRecipies(allRecipiesIngredient)
+    });
+
   })
 
   

@@ -3,6 +3,7 @@ import { getAllAppareils } from "./data/getAllAppareils.js"
 import { createTag } from "./ui/tag.js"
 import { getLocalStorage } from "./utils/localStorage.js"
 import { filterRecipiesByAppareil } from "./utils/filterRecipiesByAppareil.js"
+import { searchAppareils } from "./utils/searchAppareils.js";
 
 export const handleInputAppareil = () => {
   const inputContainer = document.querySelector('.elementTri__flex2')
@@ -44,6 +45,17 @@ export const handleInputAppareil = () => {
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.toggle('elementTri__dropdown--active')
       })
+    });
+
+    const inputAppareils = inputContainer.querySelector('.elementTri__inputAppareils')
+    
+    inputAppareils.addEventListener('input', () => {
+      const value = inputAppareils.value 
+
+      searchAppareils(value)
+      
+      const allRecipiesIngredient = getLocalStorage();
+      displayRecipies(allRecipiesIngredient)
     });
 
   })
