@@ -7,13 +7,13 @@ import { search } from "./utils/search.js"
 import { searchMain } from "./utils/searchMain_Recipies.js"
 
 export const handleInputIngredient = () => {
-  const inputContainer = document.querySelector('.elementTri__flex')
-  const arrow = inputContainer.querySelector('.elementTri__arrow')
-  const dropdown = document.querySelector('.elementTri__dropdown')
+  const inputContainer = document.querySelector('.elementTri__flex1')
+  const arrow = inputContainer.querySelector('.elementTri__arrow1')
+  const dropdown = document.querySelector('.elementTri__dropdown1')
   
   inputContainer.addEventListener('click', () => {
     
-    const input = inputContainer.querySelector('.elementTri__input')
+    const input = inputContainer.querySelector('.elementTri__inputIngredient')
     input.focus()
 
     arrow.classList.toggle('elementTri__arrow--rotate')
@@ -39,14 +39,10 @@ export const handleInputIngredient = () => {
         filterRecipiesByIngredient(ingredient)
         const allRecipiesIngredient = getLocalStorage();
         displayRecipies(allRecipiesIngredient)
-
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.remove('elementTri__dropdown--active')
       })
-
-      
-      
     });
 
     const inputIngredient = inputContainer.querySelector('.elementTri__inputIngredient')
@@ -60,16 +56,16 @@ export const handleInputIngredient = () => {
       displayRecipies(allRecipiesIngredient)
     });
 
-    const inputName = inputContainer.querySelector('.inputSearchRecette')
+   /* const inputName = inputContainer.querySelector('.inputSearchRecette')
     
     inputName.addEventListener('input', () => {
       const value = inputName.value 
-      console.log(value);
+
       searchMain(value)
       
       const allRecipiesIngredient = getLocalStorage();
       displayRecipies(allRecipiesIngredient)
-    });
+    });*/
 
     
   })

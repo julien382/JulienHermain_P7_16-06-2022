@@ -17,7 +17,6 @@ export const handleInputUstensile = () => {
 
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')
-    console.log(dropdown);
     // !! bien penser à vider la dropdown à chaque fois !!
     const list = document.querySelector('.ustensile-list')
     list.innerHTML = '';
@@ -26,7 +25,6 @@ export const handleInputUstensile = () => {
     const allRecipies = getLocalStorage();
     const allUstensiles = getAllUstensiles(allRecipies); // ['passoire', 'verres', 'couteau']
 
- 
     
     // boucle sur  allUstensiles afin d'insérer les éléments dans la dropdown
     allUstensiles.forEach(ustensile => {
@@ -40,7 +38,6 @@ export const handleInputUstensile = () => {
         filterRecipiesByUstensile(ustensile)
         const allRecipiesUstensile = getLocalStorage();
         displayRecipies(allRecipiesUstensile)
-        console.log(allRecipiesUstensile);
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.remove('elementTri__dropdown--active')

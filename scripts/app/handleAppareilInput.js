@@ -12,12 +12,11 @@ export const handleInputAppareil = () => {
 
   inputContainer.addEventListener('click', () => {
 
-    const input = inputContainer.querySelector('.elementTri__input')
+    const input = inputContainer.querySelector('.elementTri__inputAppareils')
     input.focus()
 
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')
-    console.log(dropdown);
     // !! bien penser à vider la dropdown à chaque fois !!
     const list = document.querySelector('.appareil-list')
     list.innerHTML = '';
@@ -27,7 +26,6 @@ export const handleInputAppareil = () => {
     const allAppareils = getAllAppareils(allRecipies); // ['blender', 'saladier', 'cocotte']
 
     
-   
     // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
     allAppareils.forEach(appareil => {
       const liDropdown = document.createElement('li');      
@@ -40,7 +38,6 @@ export const handleInputAppareil = () => {
         filterRecipiesByAppareil(appareil)
         const allRecipiesAppareil = getLocalStorage();
         displayRecipies(allRecipiesAppareil)
-        console.log(allRecipiesAppareil);
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.toggle('elementTri__dropdown--active')
