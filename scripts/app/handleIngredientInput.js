@@ -35,6 +35,7 @@ export const handleInputIngredient = () => {
 
       liDropdown.addEventListener('click', () => {
         createTag(ingredient, 'ingredient')
+        console.log(createTag);
         
         filterRecipiesByIngredient(ingredient)
         const allRecipiesIngredient = getLocalStorage();

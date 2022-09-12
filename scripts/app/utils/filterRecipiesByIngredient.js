@@ -3,7 +3,6 @@ import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 export const filterRecipiesByIngredient = (ingredient) => {
     // 1 - récupérer toutes les recettes (allRecipies)
     const allRecipies = getLocalStorage();
-    console.log(allRecipies);
     //const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
 
     // 2 - boucler sur les allRecettes
