@@ -296,3 +296,6 @@ body {
     font-weight: bold;
   }
   
+  #messError{
+    display: none;
+  }
