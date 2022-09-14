@@ -47,8 +47,10 @@ export const createTag = (text, type) => {
                 //console.log(ingredientName);
                 //console.log(text);
 
-                if (ingredientName == text){
+
+                if (ingredientName.includes(text)){
                     recette.display = true
+                    console.log('toto');
                 }
             })
         })
