@@ -110,6 +110,7 @@ header {
     background-color: transparent;
     box-shadow: none;
     outline: none;
+    color: white;
   }
   
   .elementTri__input::placeholder {
