@@ -3,7 +3,7 @@ import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 export const searchMain = (inputValue) => {
     const allRecipies = getLocalStorage();
     
-    const toto = document.getElementById("messError")
+    const errorMessage = document.getElementById("messError")
     
     if (inputValue.length >= 3){
         const cards = document.querySelectorAll(".cardRecette")
@@ -17,8 +17,8 @@ export const searchMain = (inputValue) => {
                 allRecipies.forEach(recette => {
                     if (recette.id == id){
                         recette.display = true
-                        toto.style = "display: none";
-                        console.log(toto);
+                        errorMessage.style = "display: none";
+                        console.log(errorMessage);
                     }
                 })
             }
@@ -26,8 +26,8 @@ export const searchMain = (inputValue) => {
                 allRecipies.forEach(recette => {
                     if (recette.id == id){
                         recette.display = false
-                        toto.style = "display: block";
-                        console.log(toto);
+                        errorMessage.style = "display: block";
+                        console.log(errorMessage);
                     }
                 })
             }
@@ -37,8 +37,8 @@ export const searchMain = (inputValue) => {
     else{
         allRecipies.forEach(recette => {
             recette.display = true
-            toto.style = "display: none";
-            console.log(toto);
+            errorMessage.style = "display: none";
+            console.log(errorMessage);
         })
     }
     setLocalStorage(allRecipies)
