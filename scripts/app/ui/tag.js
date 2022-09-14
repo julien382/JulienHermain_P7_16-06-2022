@@ -4,17 +4,17 @@ export const createTag = (text, type) => {
     //const allRecipies = getLocalStorage();
 
     const tag = document.createElement('div');
-    tag.classList.add('elementIngrédient');
+    tag.classList.add('tag');
 
     // changement de la couleur par rapport au type de l'input
     if (type === 'ingredient') {
-        tag.classList.add('elementTri__dropdown1');
+        tag.classList.add('colorIngredient');
     }
     if (type === 'appareil') {
-        tag.classList.add('elementTri__dropdown2');
+        tag.classList.add('colorAppareil');
     }
     if (type === 'ustensile') {
-        tag.classList.add('elementTri__dropdown3');
+        tag.classList.add('colorUstensile');
     }
 
     const content = document.createElement('div');
@@ -31,7 +31,7 @@ export const createTag = (text, type) => {
     content.appendChild(cross);
     tag.appendChild(content);
 
-    const triDom = document.querySelector('.tri');
+    const triDom = document.querySelector('.allTag');
     triDom.appendChild(tag);
     
     // suppression du tag au clic sur la croix
