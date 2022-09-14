@@ -1,4 +1,8 @@
+//import { getLocalStorage, setLocalStorage } from "./localStorage.js";
+
 export const createTag = (text, type) => {
+    //const allRecipies = getLocalStorage();
+
     const tag = document.createElement('div');
     tag.classList.add('elementIngrédient');
 
@@ -33,5 +37,14 @@ export const createTag = (text, type) => {
     // suppression du tag au clic sur la croix
     cross.addEventListener('click', () => {
         tag.remove()
-      })
+        allRecipies.forEach(recette => {
+            if (recette == text){
+                recette.display = true
+            }
+        })
+        
+    })
+
+
+    //setLocalStorage(allRecipies)
 }
