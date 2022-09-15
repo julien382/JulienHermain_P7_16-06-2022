@@ -57,7 +57,7 @@ export const createTag = (text, type) => {
         const list = document.querySelector('.ingredient-list')
         list.innerHTML = '';
 
-        const allRecipies = getLocalStorage();
+       // const allRecipies = getLocalStorage();
         const allIngredients = getAllIngredients(allRecipies);
         console.log(allIngredients);
 
@@ -66,6 +66,7 @@ export const createTag = (text, type) => {
             liDropdown.innerHTML = ingredient;
             list.appendChild(liDropdown);
             console.log(ingredient);
+            setLocalStorage(allRecipies)
         }); 
         
         displayRecipies(allRecipies)
