@@ -32,6 +32,7 @@ export const handleInputIngredient = () => {
       liDropdown.innerHTML = ingredient;
       list.appendChild(liDropdown);
 
+      // au click sur un li ca créer un tag
       liDropdown.addEventListener('click', () => {
         createTag(ingredient, 'ingredient')
         //console.log(createTag);

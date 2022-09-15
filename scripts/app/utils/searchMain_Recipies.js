@@ -26,7 +26,6 @@ export const searchMain = (inputValue, erase) => {
                 allRecipies.forEach(recette => {
                     if (recette.id == id){
                         recette.display = true
-                        console.log(recette);
                     }
                 })
             }
