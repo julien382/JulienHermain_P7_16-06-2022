@@ -54,26 +54,22 @@ export const createTag = (text, type) => {
                 }
             })
         })*/
-        const list = document.querySelector('.ingredient-list')
+
+       /* const list = document.querySelector('.ingredient-list')
         list.innerHTML = '';
 
-       // const allRecipies = getLocalStorage();
         const allIngredients = getAllIngredients(allRecipies);
-        console.log(allIngredients);
 
         allIngredients.forEach(ingredient => {
             const liDropdown = document.createElement('li'); 
             liDropdown.innerHTML = ingredient;
             list.appendChild(liDropdown);
-            console.log(ingredient);
+
             setLocalStorage(allRecipies)
-        }); 
+        }); */
         
         displayRecipies(allRecipies)
-
-        //recette.display = true
-        console.log(displayRecipies);
-        console.log(allRecipies);
+        setLocalStorage(allRecipies)
         
     })
 
