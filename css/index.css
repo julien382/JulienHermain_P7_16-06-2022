@@ -173,6 +173,8 @@ header {
   /* --- élément de la Dropdown --- */
   .input__list {
     text-transform: capitalize;
+    margin-top: 20px;
+
   }
   
   .input__list li {
