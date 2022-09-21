@@ -1,5 +1,5 @@
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
-import { displayRecipies } from "../displayRecipies.JS";
+import { displayRecipies } from "../displayRecipies.js";
 import { getAllIngredients } from "../data/getAllIngredients.js"
 
 export const createTag = (text, type) => {

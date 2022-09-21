@@ -25,9 +25,13 @@ export const handleInputIngredient = () => {
     const allRecipies = getLocalStorage();
     const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
 
-    
+    const tags = Array.from(document.querySelectorAll('.allTag .colorIngredient'));
+    const tagsArray = tags.map(tag => tag.innerText.toLowerCase());
+
+    const filteredIngredients = allIngredients.filter(ingredient => !tagsArray.includes(ingredient))
+    console.log(filteredIngredients);
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
-    allIngredients.forEach(ingredient => {
+    filteredIngredients.forEach(ingredient => {
       const liDropdown = document.createElement('li');      
       liDropdown.innerHTML = ingredient;
       list.appendChild(liDropdown);
