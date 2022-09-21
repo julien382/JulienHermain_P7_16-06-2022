@@ -25,9 +25,13 @@ export const handleInputAppareil = () => {
     const allRecipies = getLocalStorage();
     const allAppareils = getAllAppareils(allRecipies); // ['blender', 'saladier', 'cocotte']
 
-    
+    const tags = Array.from(document.querySelectorAll('.allTag .colorAppareil'));
+    const tagsArray = tags.map(tag => tag.innerText.toLowerCase());
+
+    const filteredAppareils = allAppareils.filter(appareil => !tagsArray.includes(appareil))
+
     // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
-    allAppareils.forEach(appareil => {
+    filteredAppareils.forEach(appareil => {
       const liDropdown = document.createElement('li');      
       liDropdown.innerHTML = appareil;
       list.appendChild(liDropdown);

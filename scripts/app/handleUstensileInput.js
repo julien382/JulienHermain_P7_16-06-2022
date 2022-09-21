@@ -25,9 +25,13 @@ export const handleInputUstensile = () => {
     const allRecipies = getLocalStorage();
     const allUstensiles = getAllUstensiles(allRecipies); // ['passoire', 'verres', 'couteau']
 
-    
+    const tags = Array.from(document.querySelectorAll('.allTag .colorUstensile'));
+    const tagsArray = tags.map(tag => tag.innerText.toLowerCase());
+
+    const filteredUstensiles = allUstensiles.filter(ustensile => !tagsArray.includes(ustensile))
+
     // boucle sur  allUstensiles afin d'insérer les éléments dans la dropdown
-    allUstensiles.forEach(ustensile => {
+    filteredUstensiles.forEach(ustensile => {
       const liDropdown = document.createElement('li');      
       liDropdown.innerHTML = ustensile;
       list.appendChild(liDropdown);
