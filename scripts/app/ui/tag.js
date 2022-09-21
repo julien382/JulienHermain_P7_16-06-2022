@@ -36,42 +36,38 @@ export const createTag = (text, type) => {
     const triDom = document.querySelector('.allTag');
     triDom.appendChild(tag);
     
-    // suppression du tag au clic sur la croix
-    cross.addEventListener('click', () => {
-        tag.remove()
-        /*
-        const ingredients = [];
-        allRecipies.forEach(recette => {
-            recette.ingredients.forEach(ingredient => {
-                const ingredientName = ingredient.ingredient.toLowerCase();
-                ingredients.push(ingredientName);
-
-                displayRecipies(allRecipies)
-
-                if (ingredientName.includes(text)){
-                    recette.display = true
-                    console.log(recette);
+        // suppression du tag au clic sur la croix
+        cross.addEventListener('click', () => {
+            const allrecipies = getLocalStorage();
+    
+            // suppression du DOM
+            tag.remove();
+            // on récupère les tags restant
+            const tagsIng = Array.from(document.querySelectorAll('.allTag .colorIngredient'));
+            const tagsApp = Array.from(document.querySelectorAll('.allTag .colorAppareil'));
+            const tagsUst = Array.from(document.querySelectorAll('.allTag .colorUstensile'));
+    
+            const tagsIngArray = tagsIng.map(tag => tag.innerText.toLowerCase());
+            const tagsAppArray = tagsApp.map(tag => tag.innerText.toLowerCase());
+            const tagsUstArray = tagsUst.map(tag => tag.innerText.toLowerCase());
+            const allTags = [...tagsIngArray, ...tagsAppArray, ...tagsUstArray];
+            
+            // on filtre les recettes en fonction des tags restants
+            allrecipies.forEach(recipie => {
+                const ingredients = recipie.ingredients.map(ingredient => ingredient.ingredient.toLowerCase());
+                const allParseData = [...recipie.ustensils, recipie.appliance.toLowerCase(), ...ingredients];
+    
+                if (allTags.every(tag => allParseData.includes(tag))) {
+                    recipie.display = true;
+                } else {
+                    recipie.display = false;
                 }
-            })
-        })*/
-
-       /* const list = document.querySelector('.ingredient-list')
-        list.innerHTML = '';
-
-        const allIngredients = getAllIngredients(allRecipies);
-
-        allIngredients.forEach(ingredient => {
-            const liDropdown = document.createElement('li'); 
-            liDropdown.innerHTML = ingredient;
-            list.appendChild(liDropdown);
-
-            setLocalStorage(allRecipies)
-        }); */
-        
-        displayRecipies(allRecipies)
-        setLocalStorage(allRecipies)
-        
-    })
+            });
+    
+            setLocalStorage(allrecipies)
+            displayRecipies(allrecipies)
+        })
+    
 
     setLocalStorage(allRecipies)
 }

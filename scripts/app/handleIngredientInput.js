@@ -29,7 +29,7 @@ export const handleInputIngredient = () => {
     const tagsArray = tags.map(tag => tag.innerText.toLowerCase());
 
     const filteredIngredients = allIngredients.filter(ingredient => !tagsArray.includes(ingredient))
-    console.log(filteredIngredients);
+
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
     filteredIngredients.forEach(ingredient => {
       const liDropdown = document.createElement('li');      
