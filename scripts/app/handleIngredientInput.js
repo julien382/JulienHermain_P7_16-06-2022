@@ -15,12 +15,10 @@ export const handleInputIngredient = () => {
   
   inputContainer.addEventListener('click', () => {
     
-    const elementTri__inputIngredient = document.querySelector('.elementTri__inputIngredient')
-    elementTri__inputIngredient.classList.add('inputMin')
-    const placeholder = document.querySelector('.inputMin')
-    placeholder.placeholder = "Ingrédients"
     
     //changer le placeholder
+    document.querySelector('.elementTri__inputIngredient').placeholder = "Ingrédients"
+    const placeholder = document.querySelector('.elementTri__inputIngredient')
     placeholder.classList.toggle('inputGrey')
     //ajout de la class elementTriBig, pour agrandir la list ul
     const elementTri = document.querySelector('.colorIngredient')
