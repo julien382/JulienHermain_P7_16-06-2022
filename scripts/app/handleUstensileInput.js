@@ -13,8 +13,8 @@ export const handleInputUstensile = () => {
   inputContainer.addEventListener('click', () => {
 
     //changer le placeholder
+    document.querySelector('.elementTri__inputUstensiles').placeholder = "Ustensiles"
     const placeholder = document.querySelector('.elementTri__inputUstensiles')
-    placeholder.placeholder = "Rechercher un ustensile"
     placeholder.classList.toggle('inputGrey')
     //ajout de la class elementTriBig, pour agrandir la list ul
     const elementTri = document.querySelector('.colorUstensile')
@@ -26,6 +26,9 @@ export const handleInputUstensile = () => {
 
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')
+    if (dropdown.classList.contains('elementTri__dropdown--active')){
+      document.querySelector('.elementTri__inputUstensiles').placeholder = "Rechercher un ustensile"
+    }
     // !! bien penser à vider la dropdown à chaque fois !!
     const list = document.querySelector('.ustensile-list')
     list.innerHTML = '';

@@ -10,11 +10,7 @@ export const handleInputIngredient = () => {
   const arrow = inputContainer.querySelector('.elementTri__arrow1')
   const dropdown = document.querySelector('.elementTri__dropdown1')
 
-  
-  
-  
   inputContainer.addEventListener('click', () => {
-    
     
     //changer le placeholder
     document.querySelector('.elementTri__inputIngredient').placeholder = "Ingrédients"
