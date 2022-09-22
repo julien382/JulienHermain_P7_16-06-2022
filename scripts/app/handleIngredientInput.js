@@ -30,6 +30,10 @@ export const handleInputIngredient = () => {
 
     const filteredIngredients = allIngredients.filter(ingredient => !tagsArray.includes(ingredient))
 
+    //ajout de la class elementTriBig, pour agrandir la list ul
+    const elementTri = document.querySelector('.colorIngredient')
+    elementTri.classList.toggle('elementTriBig')
+
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
     filteredIngredients.forEach(ingredient => {
       const liDropdown = document.createElement('li');      

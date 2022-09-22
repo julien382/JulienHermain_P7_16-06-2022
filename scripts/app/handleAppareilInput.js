@@ -30,6 +30,10 @@ export const handleInputAppareil = () => {
 
     const filteredAppareils = allAppareils.filter(appareil => !tagsArray.includes(appareil))
 
+    //ajout de la class elementTriBig, pour agrandir la list ul
+    const elementTri = document.querySelector('.colorAppareil')
+    elementTri.classList.toggle('elementTriBig')
+
     // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
     filteredAppareils.forEach(appareil => {
       const liDropdown = document.createElement('li');      

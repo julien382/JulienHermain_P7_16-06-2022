@@ -30,6 +30,10 @@ export const handleInputUstensile = () => {
 
     const filteredUstensiles = allUstensiles.filter(ustensile => !tagsArray.includes(ustensile))
 
+    //ajout de la class elementTriBig, pour agrandir la list ul
+    const elementTri = document.querySelector('.colorUstensile')
+    elementTri.classList.toggle('elementTriBig')
+
     // boucle sur  allUstensiles afin d'insérer les éléments dans la dropdown
     filteredUstensiles.forEach(ustensile => {
       const liDropdown = document.createElement('li');      

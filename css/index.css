@@ -96,9 +96,14 @@ header {
     margin-bottom: 25px;
     position: relative;
   }
+
+  .elementTriBig {
+    width: 600px;
+  }
   
   .elementTri__flex {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     position: relative;
   }
@@ -174,7 +179,10 @@ header {
   .input__list {
     text-transform: capitalize;
     margin-top: 20px;
-
+    max-height: 390px;
+    display: flex;
+    flex-wrap:wrap;
+    overflow: auto;
   }
   
   .input__list li {
