@@ -12,9 +12,18 @@ export const handleInputAppareil = () => {
 
   inputContainer.addEventListener('click', () => {
 
+    //changer le placeholder
+    const placeholder = document.querySelector('.elementTri__inputAppareils')
+    placeholder.placeholder = "Rechercher un appareil"
+    placeholder.classList.toggle('inputGrey')
+    //ajout de la class elementTriBig, pour agrandir la list ul
+    const elementTri = document.querySelector('.colorAppareil')
+    elementTri.classList.toggle('elementTriBig')
+
+
     const input = inputContainer.querySelector('.elementTri__inputAppareils')
     input.focus()
-
+    
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')
     // !! bien penser à vider la dropdown à chaque fois !!
@@ -29,10 +38,6 @@ export const handleInputAppareil = () => {
     const tagsArray = tags.map(tag => tag.innerText.toLowerCase());
 
     const filteredAppareils = allAppareils.filter(appareil => !tagsArray.includes(appareil))
-
-    //ajout de la class elementTriBig, pour agrandir la list ul
-    const elementTri = document.querySelector('.colorAppareil')
-    elementTri.classList.toggle('elementTriBig')
 
     // boucle sur  allAppareils afin d'insérer les éléments dans la dropdown
     filteredAppareils.forEach(appareil => {
@@ -49,6 +54,9 @@ export const handleInputAppareil = () => {
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.toggle('elementTri__dropdown--active')
+        elementTri.classList.remove('elementTriBig')
+        document.querySelector('.elementTri__inputAppareils').placeholder = "Appareils"
+        placeholder.classList.remove('inputGrey')
       })
     });
 

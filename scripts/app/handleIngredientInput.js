@@ -12,6 +12,15 @@ export const handleInputIngredient = () => {
   
   inputContainer.addEventListener('click', () => {
     
+    //changer le placeholder
+    const placeholder = document.querySelector('.elementTri__inputIngredient')
+    placeholder.placeholder = "Rechercher un ingrédient"
+    placeholder.classList.toggle('inputGrey')
+    //ajout de la class elementTriBig, pour agrandir la list ul
+    const elementTri = document.querySelector('.colorIngredient')
+    elementTri.classList.toggle('elementTriBig')
+
+
     const input = inputContainer.querySelector('.elementTri__inputIngredient')
     input.focus()
 
@@ -30,10 +39,6 @@ export const handleInputIngredient = () => {
 
     const filteredIngredients = allIngredients.filter(ingredient => !tagsArray.includes(ingredient))
 
-    //ajout de la class elementTriBig, pour agrandir la list ul
-    const elementTri = document.querySelector('.colorIngredient')
-    elementTri.classList.toggle('elementTriBig')
-
     // boucle sur  allIngredients afin d'insérer les éléments dans la dropdown
     filteredIngredients.forEach(ingredient => {
       const liDropdown = document.createElement('li');      
@@ -51,6 +56,9 @@ export const handleInputIngredient = () => {
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.remove('elementTri__dropdown--active')
+        elementTri.classList.remove('elementTriBig')
+        document.querySelector('.elementTri__inputIngredient').placeholder = "Ingrédients"
+        placeholder.classList.remove('inputGrey')
       })
     });
 

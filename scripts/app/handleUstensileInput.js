@@ -12,6 +12,15 @@ export const handleInputUstensile = () => {
 
   inputContainer.addEventListener('click', () => {
 
+    //changer le placeholder
+    const placeholder = document.querySelector('.elementTri__inputUstensiles')
+    placeholder.placeholder = "Rechercher un ustensile"
+    placeholder.classList.toggle('inputGrey')
+    //ajout de la class elementTriBig, pour agrandir la list ul
+    const elementTri = document.querySelector('.colorUstensile')
+    elementTri.classList.toggle('elementTriBig')
+
+
     const input = inputContainer.querySelector('.elementTri__input')
     input.focus()
 
@@ -30,10 +39,6 @@ export const handleInputUstensile = () => {
 
     const filteredUstensiles = allUstensiles.filter(ustensile => !tagsArray.includes(ustensile))
 
-    //ajout de la class elementTriBig, pour agrandir la list ul
-    const elementTri = document.querySelector('.colorUstensile')
-    elementTri.classList.toggle('elementTriBig')
-
     // boucle sur  allUstensiles afin d'insérer les éléments dans la dropdown
     filteredUstensiles.forEach(ustensile => {
       const liDropdown = document.createElement('li');      
@@ -49,6 +54,9 @@ export const handleInputUstensile = () => {
         //list.remove()
         arrow.classList.toggle('elementTri__arrow--rotate')
         dropdown.classList.remove('elementTri__dropdown--active')
+        elementTri.classList.remove('elementTriBig')
+        document.querySelector('.elementTri__inputUstensiles').placeholder = "Ustensiles"
+        placeholder.classList.remove('inputGrey')
       })
     });
     

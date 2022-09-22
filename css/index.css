@@ -121,6 +121,11 @@ header {
   .elementTri__input::placeholder {
     color: white;
   }
+
+  .inputGrey::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
   
   /* --- inputArrow --- */
   .elementTri__arrow {
@@ -180,8 +185,9 @@ header {
     text-transform: capitalize;
     margin-top: 20px;
     max-height: 390px;
-    display: flex;
-    flex-wrap:wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*flex-wrap:wrap;*/
     overflow: auto;
   }
   
@@ -189,8 +195,13 @@ header {
     cursor: pointer;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 5px;
-    padding-left: 23px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: flex;
+    align-items: center;
   }
   
   .input__list li:hover {
