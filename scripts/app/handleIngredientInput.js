@@ -9,12 +9,18 @@ export const handleInputIngredient = () => {
   const inputContainer = document.querySelector('.elementTri__flex1')
   const arrow = inputContainer.querySelector('.elementTri__arrow1')
   const dropdown = document.querySelector('.elementTri__dropdown1')
+
+  
+  
   
   inputContainer.addEventListener('click', () => {
     
+    const elementTri__inputIngredient = document.querySelector('.elementTri__inputIngredient')
+    elementTri__inputIngredient.classList.add('inputMin')
+    const placeholder = document.querySelector('.inputMin')
+    placeholder.placeholder = "Ingrédients"
+    
     //changer le placeholder
-    const placeholder = document.querySelector('.elementTri__inputIngredient')
-    placeholder.placeholder = "Rechercher un ingrédient"
     placeholder.classList.toggle('inputGrey')
     //ajout de la class elementTriBig, pour agrandir la list ul
     const elementTri = document.querySelector('.colorIngredient')
@@ -26,6 +32,9 @@ export const handleInputIngredient = () => {
 
     arrow.classList.toggle('elementTri__arrow--rotate')
     dropdown.classList.toggle('elementTri__dropdown--active')
+    if (dropdown.classList.contains('elementTri__dropdown--active')){
+      document.querySelector('.elementTri__inputIngredient').placeholder = "Rechercher un ingrédient"
+    }
     // !! bien penser à vider la dropdown à chaque fois !!
     const list = document.querySelector('.ingredient-list')
     list.innerHTML = '';
