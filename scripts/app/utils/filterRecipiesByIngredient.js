@@ -6,7 +6,7 @@ export const filterRecipiesByIngredient = (ingredient) => {
     //const allIngredients = getAllIngredients(allRecipies); // ['pomme', 'poire', 'fraise']
 
     // 2 - boucler sur les allRecettes
-    allRecipies.forEach(recipe => {
+    /*allRecipies.forEach(recipe => {
       // 3 - voir si dans chaque recettes l'ingrédient est présent dans la liste d'ingrédients
       if (recipe.display == true){
         const ingredientRecette = recipe.ingredients.map(element => element.ingredient.toLowerCase())
@@ -19,6 +19,22 @@ export const filterRecipiesByIngredient = (ingredient) => {
       }
 
     })
+    setLocalStorage(allRecipies)
+    */
+    for (let i = 0; i < allRecipies.length; i++) {
+      const recipe = allRecipies[i];
+      
+      if (recipe.display == true){
+        const ingredientRecette = recipe.ingredients.map(element => element.ingredient.toLowerCase())
+        if (ingredientRecette.includes(ingredient)){
+          recipe.display = true
+        }
+        else{
+          recipe.display = false
+        }
+      }
+    }
+
     setLocalStorage(allRecipies)
       
     // indexOf()
