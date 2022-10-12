@@ -8,3 +8,5 @@ La recherche principale se déclanche à partir de 3 carctères
 Un message d'erreur s'affiche si aucune recette ne correspond à la recherche.
 
 Lancement du projet index.html
+
+Github Pages : https://julien382.github.io/JulienHermain_P7_16-06-2022/
