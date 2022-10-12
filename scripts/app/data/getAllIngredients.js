@@ -10,6 +10,7 @@ export const getAllIngredients = (allRecipies) => {
         }
     });
 
+    // récupérer qu'un seul même ingrédient, pour éviter les doubles
     const uniqueIngredients = [...new Set(ingredients)];
     return uniqueIngredients;
 }

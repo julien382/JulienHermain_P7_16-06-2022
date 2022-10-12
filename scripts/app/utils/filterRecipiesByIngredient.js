@@ -1,5 +1,6 @@
 import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 
+
 export const filterRecipiesByIngredient = (ingredient) => {
     // 1 - récupérer toutes les recettes (allRecipies)
     const allRecipies = getLocalStorage();
